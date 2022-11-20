@@ -1,5 +1,5 @@
 import express from 'express';
-import { addNewNotes, getAllNotes } from './src/notes.js';
+import { addNewNotes, getAllNotes, updateNotes } from './src/notes.js';
 
 
 // create a new server
@@ -8,6 +8,7 @@ app.use(express.json())
 
 app.post('/notes', addNewNotes)
 app.get('/notes', getAllNotes)
+app.patch('/notes', updateNotes)
 
 app.get('/', (req, res) => {
     res.send('Hello')
