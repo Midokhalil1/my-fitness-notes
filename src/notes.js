@@ -40,7 +40,7 @@ export async function updateNote(req, res) {
             return
         })
     res.status(202).send({ message: "note updated" })
-    getAllNotes(req, res)//?//
+    getAllNotes(req, res)
 }
 export async function getOneNote(req, res) {
     const db = dbConnect()

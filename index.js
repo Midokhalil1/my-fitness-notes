@@ -1,10 +1,12 @@
 import express from 'express';
+import cors from 'cors'
 import { addNewNote, getAllNotes, updateNote, getOneNote, deleteNote  } from './src/notes.js';
 
 
 // create a new server
 const app = express();
 app.use(express.json())
+app.use(cors())
 
 app.post('/notes', addNewNote)
 app.get('/notes', getAllNotes)
